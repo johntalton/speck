@@ -1,0 +1,38 @@
+{
+  "name": "@johntalton/speck",
+  "version": "1.0.0",
+  "description": "Stephanie Speck not Number 5",
+  "main": "src/speck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johntalton/speck.git"
+  },
+  "keywords": [
+    "Speck",
+    "IoT"
+  ],
+  "author": "johntalton@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johntalton/speck/issues"
+  },
+  "homepage": "https://github.com/johntalton/speck#readme",
+  "devDependencies": {
+    "eslint": "^5.0.0-alpha.4",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-immutable": "^1.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsdoc": "^3.7.0",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-no-use-extend-native": "^0.3.12",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-spellcheck": "0.0.10"
+  }
+}
