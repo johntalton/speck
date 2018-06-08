@@ -4,7 +4,6 @@
   "description": "Stephanie Speck not Number 5",
   "main": "src/speck.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint ."
   },
   "repository": {
@@ -22,8 +21,13 @@
   },
   "homepage": "https://github.com/johntalton/speck#readme",
   "dependencies": {
+    "@johntalton/and-other-delights": "johntalton/and-other-delights",
     "@johntalton/mcp23": "johntalton/mcp23",
-    "@johntalton/tcs34725": "johntalton/tcs34725"
+    "@johntalton/tcs34725": "johntalton/tcs34725",
+    "mqtt": "^2.18.0",
+    "onoff": "^3.1.0",
+    "@johntalton/rasbus": "file://../rasbus",
+    "rasbus": "johntalton/rasbus"
   },
   "devDependencies": {
     "eslint": "^5.0.0-alpha.4",
