@@ -21,6 +21,10 @@
     "url": "https://github.com/johntalton/speck/issues"
   },
   "homepage": "https://github.com/johntalton/speck#readme",
+  "dependencies": {
+    "@johntalton/mcp23": "johntalton/mcp23",
+    "@johntalton/tcs34725": "johntalton/tcs34725"
+  },
   "devDependencies": {
     "eslint": "^5.0.0-alpha.4",
     "eslint-config-airbnb-base": "^12.1.0",
