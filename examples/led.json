@@ -1,0 +1,25 @@
+{
+  "name": "LedButton",
+  "mqtt": {},
+  "devices": [
+    { "type": "ledDemo", "button": "button", "led": "led" },
+    { "name": "INTA", "type": "gpio", "pin": 6, "direction": "in", "edge": "both", "activeLow": true },
+    { "name": "INTB", "type": "gpio", "pin": 5, "direction": "in", "edge": "both", "activeLow": true },
+    {
+      "name": "extender",
+      "type": "mcp23",
+      "bus": { "driver": "I\u00B2C", "id": [ 1, 32 ] },
+      "interruptA": "INTA",
+      "interruptB": "INTB",
+
+      "setProfileOnStart": true,
+      "setExportsOnStart": true,
+
+      "profile": { "interrupt": { "mode": "open-drain" } },
+      "exports": [
+        { "name": "button", "pin": 0, "direction": "in", "edge": "both", "activeLow": true, "pullUp": true },
+        { "name": "led", "pin": 15, "direction": "out" }
+      ]
+    }
+  ]
+}

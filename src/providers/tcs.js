@@ -125,7 +125,7 @@ class TcsDevice extends Providable {
       DEFAULT_POLL_MS);
 
     console.log('setting up poll interval for ms', pollIntervalMs);
-    //this.poller = setInterval(() => this._poll(), pollIntervalMs);
+    this.poller = setInterval(() => this._poll(), pollIntervalMs);
   }
 
   _startStepper() {
@@ -204,7 +204,11 @@ class TcsDevice extends Providable {
       });
   }
 
-  _pollPerformSoftwareInterrupt(result, data) {
+  _pollPerformBeforeMultiplyerRotate() {
+    return Promise.resolve();
+  }
+
+  _pollPerformSoftwareAfterInterrupt(result, data) {
     if(result.thresholdViolation !== undefined) {
       // console.log('polled interrupt value', config.name, result.thresholdViolation);
       if(result.thresholdViolation === true) {
@@ -224,20 +228,16 @@ class TcsDevice extends Providable {
     return Promise.resolve(result);
   }
 
-  _pollPerformMultiplyerRotate() {
-    return Promise.resolve();
-  }
-
   _pollPerformBeforeAll(result) {
     return Promise.all([
-      this._pollPerformMultiplyerRotate()
+      this._pollPerformBeforeMultiplyerRotate()
     ])
     .catch(e => { console.log('Error in Before action', e); });
   }
 
   _pollPerformAfterAll(result, data) {
     return Promise.all([
-      this._pollPerformSoftwareInterrupt(result, data)
+      this._pollPerformAfterSoftwareInterrupt(result, data)
     ])
     .catch(e => { console.log('Error in After action', e); });
   }
@@ -252,8 +252,12 @@ class TcsDevice extends Providable {
     }
 
     console.log('Tcs device recived interrupt watch', value);
+    if(value === 0) { // todo test LOW
+      console.log('tcs watch handler suppressing LOW value');
+      return;
+    }
 
-    // no go find out some information
+    // now go find out some information
     await Promise.all([
       this.device.threshold(),
       this.device.data()
@@ -263,8 +267,6 @@ class TcsDevice extends Providable {
         console.log('error in watch interrupt', e);
       });
   }
-
-
 
 
   // -------------------------------

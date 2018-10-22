@@ -2,7 +2,7 @@
   "name": "@johntalton/speck",
   "version": "1.0.0",
   "description": "Stephanie Speck not Number 5",
-  "main": "src/speck.js",
+  "main": "src/index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint ."
   },
@@ -24,10 +24,11 @@
     "@johntalton/and-other-delights": "johntalton/and-other-delights",
     "@johntalton/mcp23": "johntalton/mcp23",
     "@johntalton/tcs34725": "johntalton/tcs34725",
+    "@johntalton/tca9548": "file://../tca9548",
+    "@johntalton/boschieu": "johntalton/boschieu",
     "mqtt": "^2.18.0",
     "onoff": "^3.1.0",
-    "@johntalton/rasbus": "file://../rasbus",
-    "rasbus": "johntalton/rasbus"
+    "@johntalton/rasbus": "johntalton/rasbus"
   },
   "devDependencies": {
     "eslint": "^5.0.0-alpha.4",

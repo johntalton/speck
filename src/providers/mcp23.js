@@ -25,10 +25,10 @@ class Mcp23Device extends Providable {
   inject(name, client) {
     console.log('     injected into mcp23', name);
     if(name === 'I\u00B2C') { this.i2c = client; }
-    if(name === '\uD83D\uDECE A') { this.intA = client; }
-    if(name === '\uD83D\uDECE B') { this.intB = client; }
+    if(name === this.config.interruptA) { this.intA = client; }
+    if(name === this.config.interruptB) { this.intB = client; }
 
-    //console.log('checking this', this);
+    // console.log('checking this', this);
     if(this.status !== 'up' && this.i2c !== undefined && this.intA !== undefined) {
       //
       this.status = 'up';
@@ -83,8 +83,8 @@ class Mcp23Device extends Providable {
       const nexts = [];
       // todo a/b should be compaired with the Rasbus.gpio.HIGH
       // todo int AB should be writing Rasbus.gpio.HIGH
-      if(a === 1) { console.log('initial read int A HIGH'); nexts.push(this._interruptA(null, 1)); }
-      if(b === 1) { console.log('initial read int B HIGH'); nexts.push(this._interruptB(null, 1)); }
+      if(a === 1) { console.log('initial read int A HIGH'); nexts.push(this._interruptA(false, 1)); }
+      if(b === 1) { console.log('initial read int B HIGH'); nexts.push(this._interruptB(false, 1)); }
       return Promise.all(nexts);
     })
     .then(() => {

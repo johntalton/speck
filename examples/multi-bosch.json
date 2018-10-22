@@ -1,0 +1,42 @@
+{
+  "name": "MultiBosch",
+  "mqtt": {
+    "name": "MQTT \uD83D\uDCE3",
+    "reconnectPeriodS": 5
+  },
+  "devices": [
+    {
+      "name": "tca-reset",
+      "type": "gpio",
+      "pin": 26,
+      "directin": "out",
+      "activeLow": true
+    },
+    {
+      "name": "Virtual I2C",
+      "type": "tca9548",
+      "active": true,
+      "bus": { "driver": "I\u00B2C", "id": [ 42, 112 ] },
+      "reset": "tca-reset",
+      "channels": [ 0, 1, 5 ]
+    },
+    {
+      "name": "Bosch A",
+      "type": "boschieu",
+      "active": true,
+      "bus": { "driver": "Virtual I2C", "id": [ 0, 666 ] },
+      "profile": {
+        "mode": "NORMAL"
+      }
+    },
+    {
+      "name": "Bosch B",
+      "type": "boschieu",
+      "active": true,
+      "bus": { "driver": "Virtual I2C", "id": [ 1, 666 ] },
+      "profile": {
+        "mode": "NORMAL"
+      }
+    }
+ ]
+}
