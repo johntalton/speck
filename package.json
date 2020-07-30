@@ -26,7 +26,7 @@
     "@johntalton/tcs34725": "johntalton/tcs34725",
     "@johntalton/tca9548": "file://../tca9548",
     "@johntalton/boschieu": "johntalton/boschieu",
-    "mqtt": "^2.18.0",
+    "mqtt": "^4.1.0",
     "onoff": "^3.1.0",
     "@johntalton/rasbus": "johntalton/rasbus"
   },
