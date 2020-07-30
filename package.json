@@ -21,14 +21,13 @@
   },
   "homepage": "https://github.com/johntalton/speck#readme",
   "dependencies": {
-    "@johntalton/and-other-delights": "johntalton/and-other-delights",
-    "@johntalton/mcp23": "johntalton/mcp23",
-    "@johntalton/tcs34725": "johntalton/tcs34725",
-    "@johntalton/tca9548": "file://../tca9548",
-    "@johntalton/boschieu": "johntalton/boschieu",
-    "mqtt": "^2.18.0",
-    "onoff": "^3.1.0",
-    "@johntalton/rasbus": "johntalton/rasbus"
+    "@johntalton/and-other-delights": "^3.0.0",
+    "@johntalton/boschieu": "^3.0.0",
+    "@johntalton/mcp23": "github:johntalton/mcp23",
+    "@johntalton/tca9548": "^1.0.0",
+    "@johntalton/tcs34725": "^1.0.0",
+    "mqtt": "^4.1.0",
+    "onoff": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^5.0.0-alpha.4",
