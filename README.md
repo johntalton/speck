@@ -2,6 +2,17 @@
 
 Johnny Five may have been alive, but it was Stephenie Speck that taugh him to have hart!
 
+
+[![npm Version](https://img.shields.io/npm/v/@johntalton/speck.svg)](https://www.npmjs.com/package/@johntalton/speck)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/johntalton/speck)
+![CI](https://github.com/johntalton/speck/workflows/CI/badge.svg?branch=master&event=push)
+![CodeQL](https://github.com/johntalton/speck/workflows/CodeQL/badge.svg)
+![GitHub](https://img.shields.io/github/license/johntalton/speck)
+[![Downloads Per Month](https://img.shields.io/npm/dm/@johntalton/speck.svg)](https://www.npmjs.com/package/@johntalton/speck)
+![GitHub last commit](https://img.shields.io/github/last-commit/johntalton/speck)
+[![Package Quality](https://npm.packagequality.com/shield/%40johntalton%2Fspeck.svg)](https://packagequality.com/#?package=@johntalton/speck)
+
+
 ## Motivation
 
 An amalgimation of several other examples found other `@johntalton` libraries.  While each of
