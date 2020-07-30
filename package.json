@@ -27,7 +27,7 @@
     "@johntalton/tca9548": "file://../tca9548",
     "@johntalton/boschieu": "johntalton/boschieu",
     "mqtt": "^4.1.0",
-    "onoff": "^3.1.0",
+    "onoff": "^6.0.0",
     "@johntalton/rasbus": "johntalton/rasbus"
   },
   "devDependencies": {
