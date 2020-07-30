@@ -31,7 +31,7 @@
     "@johntalton/rasbus": "johntalton/rasbus"
   },
   "devDependencies": {
-    "eslint": "^5.0.0-alpha.4",
+    "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-fp": "^2.3.0",
