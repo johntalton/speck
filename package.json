@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/johntalton/speck#readme",
   "dependencies": {
-    "@johntalton/and-other-delights": "^3.0.0",
+    "@johntalton/and-other-delights": "^6.0.1",
     "@johntalton/boschieu": "^3.0.0",
     "@johntalton/mcp23": "github:johntalton/mcp23",
     "@johntalton/tca9548": "^1.0.0",
